@@ -564,41 +564,19 @@ img {
     letter-spacing: 0.01em;
 }
 
-.btn-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 50px;
-    cursor: pointer;
-    color: var(--white-color);
-    background-color: var(--accent-color);
-    border: transparent;
-    border-radius: 4px;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    transition: background-color var(--trans-value), box-shadow var(--trans-value);
-}
 
-.btn-form:hover,
-.btn-form:focus {
-    background-color: var(--active-color);
-}
 
-.modal-submit {
+.modal__submit {
     margin: 0 auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.modal-submit:hover,
-.modal-submit:focus {
+.modal__submit:hover,
+.modal__submit:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.form-accept {
+.modal__accept {
     position: relative;
     display: flex;
     justify-content: center;
@@ -607,7 +585,7 @@ img {
     margin-bottom: 30px;
 }
 
-.check-icon {
+.modal__check-icon {
     position: absolute;
     top: 3px;
     left: 20px;
@@ -617,7 +595,7 @@ img {
     border-radius: 2px;
 }
 
-.form-checkbox {
+.modal__checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -626,7 +604,7 @@ img {
     left: 20px;
 }
 
-.form-checkbox:checked+.check-icon {
+.modal__checkbox:checked+.modal__check-icon {
     background-color: var(--accent-color);
     background-image: url('../images/check.svg');
     background-size: contain;
@@ -634,11 +612,12 @@ img {
     border-color: var(--accent-color);
 }
 
-.accept-text {
+.modal__text {
     margin-left: 36px;
 }
 
-.link-check {
+.modal__link {
+    text-decoration: underline;
     color: var(--accent-color)
 }
 
@@ -765,10 +744,19 @@ img {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.btn-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    transition: background-color var(--trans-value), box-shadow var(--trans-value);
+}
+
 /*================================================================
 portfolio
 ===================================================================*/
-.project-title {
+.projects__title {
     color: var(--text-primary-color);
     font-weight: 700;
     font-size: 18px;
@@ -776,19 +764,19 @@ portfolio
     letter-spacing: 0.06em;
 }
 
-.project-item {
+.project__desc {
     color: var(--text-secondary-color);
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
 }
 
-.project-thumb {
+.projects__thumb {
     position: relative;
     overflow: hidden;
 }
 
-.project-overlay {
+.projects__overlay {
 
     position: absolute;
     content: '';
@@ -801,7 +789,7 @@ portfolio
     transition: transform var(--trans-value);
 }
 
-.project-content {
+.projects__lead {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -817,38 +805,38 @@ portfolio
 
 }
 
-.filter-box {
+.filter-buttons {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
 
-.filter-box .item:not(:last-child) {
+.filter-buttons__item:not(:last-child) {
     margin-right: 8px;
 }
 
-.filter-content {
+.projects {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.filter-content .item {
+.projects__item {
     flex-basis: calc((100% - 60px) / 3);
     transition: box-shadow var(--trans-value);
 }
 
-.filter-content .item:hover,
-.filter-content .item:focus {
+.projects__item:hover,
+.projects__item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.filter-content .item:focus .project-overlay,
-.filter-content .item:hover .project-overlay {
+.projects__item:focus .projects__overlay,
+.projects__item:hover .projects__overlay {
     transform: translateY(0);
 }
 
-.filter-text {
+.projects__text {
     padding: 20px 24px;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
