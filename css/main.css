@@ -452,6 +452,7 @@ img {
 
 .modal__btn {
   position: absolute;
+  cursor: pointer;
   top: 8px;
   right: 8px;
   display: -webkit-box;
